@@ -52,3 +52,106 @@ twisted-humor/
 │   ├── comments/
 │   └── descriptions/
 └── README.md
+
+## Data Files
+
+### `data/twistedhumor.csv`
+
+Main dataset file. Each row corresponds to one YouTube Short.
+
+Expected columns include:
+
+| Column | Description |
+| :-- | :-- |
+| `video_id` | Unique YouTube video identifier |
+| `url` | Direct YouTube video link |
+| `title` | Video title |
+| `description` | Video description |
+| `transcript_text` | Transcript generated from the video audio |
+| `channel` | YouTube channel name |
+| `channel_id` | YouTube channel identifier |
+| `uploader` | Uploader name |
+| `uploader_id` | Uploader identifier |
+| `upload_date` | Date the video was uploaded |
+| `duration` | Video duration |
+| `view_count` | Number of views |
+| `like_count` | Number of likes |
+| `comment_count` | Number of comments |
+| `language` | Detected language |
+| `searched_keyword` | Keyword used to find the candidate video |
+| `humor_presence` | Human label for humor presence |
+| `humor_type` | Human label for humor type |
+| `joke_topic` | Human label for joke topic |
+| `rhetorical_device` | Human label for irony or satire |
+| `stand_up` | Human label for stand up comedy |
+| `target_category` | Human label for sensitive target category |
+| `intensity` | Human label for dark humor intensity |
+
+### `data/comments/`
+
+Contains comment files associated with videos in the dataset. Each file is organized by video ID.
+
+### `data/descriptions/`
+
+Contains original video descriptions organized by video ID.
+
+## Annotation Labels
+
+### Humor Presence
+
+| Label | Meaning |
+| :-- | :-- |
+| `Humor` | The video contains humor |
+| `Not Humor` | The video does not contain humor |
+| `Ambiguous` | Humor is unclear or uncertain |
+
+### Humor Type
+
+| Label | Meaning |
+| :-- | :-- |
+| `Regular Humor` | Humor based on playful, surprising, or socially acceptable topics |
+| `Dark Humor` | Humor involving taboo, offensive, sensitive, or morally provocative themes |
+| `None of these` | No humor type applies |
+
+### Rhetorical Device
+
+| Label | Meaning |
+| :-- | :-- |
+| `Irony` | Meaning differs from literal expression |
+| `Satire` | Humor critiques a person, system, institution, or social issue |
+| `Neither` | No clear irony or satire |
+
+### Target Category
+
+Dark humor videos may include one of the following target categories:
+
+| Target Category |
+| :-- |
+| `Gender or sex related` |
+| `Mental health` |
+| `Disability` |
+| `Race or ethnicity` |
+| `Violence or death` |
+| `Other sensitive target` |
+| `None` |
+
+### Intensity
+
+| Label | Meaning |
+| :-- | :-- |
+| `Mild` | Sensitive theme is present but low severity |
+| `Moderate` | Sensitive theme is clear and potentially uncomfortable |
+| `Severe` | Sensitive theme is highly offensive, harmful, or disturbing |
+
+## Citation
+
+If you use this dataset, please cite:
+
+```bibtex
+@misc{johns2026twistedhumor,
+  title = {When Jokes Cross the Line: Analyzing Regular Humor and Dark Humor in YouTube Shorts},
+  author = {Johns, Sydney and Parthasarathy, Sanjeev and Bhalla, Shantnu and Garg, Vaibhav},
+  year = {2026},
+  note = {Manuscript submitted to ACM}
+}
+```
