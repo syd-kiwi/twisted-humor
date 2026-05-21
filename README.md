@@ -52,6 +52,7 @@ twisted-humor/
 │   ├── comments/
 │   └── descriptions/
 └── README.md
+```
 
 ## Data Files
 
